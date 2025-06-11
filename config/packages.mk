@@ -86,10 +86,12 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 
 ifneq ($(TARGET_BUILD_GAPPS),true)
 PRODUCT_PACKAGES += \
+    ESpeakNG \
     Etar \
     LatinIME \
     messaging \
-    SetupWizard
+    SetupWizard \
+    Talkback
 endif
 
 # Include explicitly to work around GMS issues
