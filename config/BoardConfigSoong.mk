@@ -34,6 +34,7 @@ SOONG_CONFIG_lineageGlobalVars += \
     target_init_vendor_lib \
     camera_needs_client_info_defaults \
     target_camera_package_name \
+    uses_miui_camera \
     target_trust_usb_control_path \
     target_trust_usb_control_enable \
     target_trust_usb_control_disable \
@@ -72,8 +73,10 @@ TARGET_TRUST_USB_CONTROL_ENABLE ?= 1
 TARGET_TRUST_USB_CONTROL_DISABLE ?= 0
 TARGET_CHARGE_RATE_MULTIPLIER ?= 1
 TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED ?= false
+TARGET_USES_MIUI_CAMERA ?= false
 
 # Soong value variables
+SOONG_CONFIG_lineageGlobalVars_uses_miui_camera := $(TARGET_USES_MIUI_CAMERA)
 SOONG_CONFIG_lineageGlobalVars_camera_skip_kind_check := $(CAMERA_SKIP_KIND_CHECK)
 SOONG_CONFIG_lineageGlobalVars_camera_override_format_from_reserved := $(TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED)
 SOONG_CONFIG_lineageGlobalVars_target_camera_package_name := $(TARGET_CAMERA_PACKAGE_NAME)
